@@ -86,3 +86,53 @@ console.log(Number.isNaN(NaN)); // true
 console.log("-------");
 console.log(typeof null);    // object
 console.log(typeof undefined);  // undefined
+
+// Global Scope
+
+//let globalVar = "Hello";
+
+// function Scope
+
+let globalVar = " I am global variable";
+
+function functionScope(){
+    let functionVar = " I am a function";
+    functionVar = " I am a function !!!!";
+    console.log(functionVar);
+    console.log(globalVar);
+}
+functionScope();
+console.log("Ran functionScope once");
+globalVar = " I am global Varaibale &&&&&&";
+functionScope();
+//I am a function
+//I am global variable
+//Ran function Scope once
+//I am a function !!!!
+// I am global Variable &&&&
+
+
+//Block Scope
+
+console.log( "_____________");
+if(1===1){
+    let blockScope = "blockscope";
+    var testScope = "hihi";
+}
+
+for(let i = 0; i<2; i++){
+    let blockScope = "blockScope";
+}
+console.log(testScope);
+// result hihi
+
+console.log( "_____________");
+
+for(let i = 0; i<2; i++){
+    console.log("hello");
+}     
+// hello 
+   hello
+
+
+
